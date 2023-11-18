@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "email": "johndoe1@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Reminder: meeting tomorrow at 10am in conference room.",
+      "isSeen": false
+    },
+    {
+      "id": 2,
+      "email": "janedoe@example.com",
+      "subject": "Project Update",
+      "message": "Project progress update: on track to meet deadline.",
+      "isSeen": true
+    },
+    {
+      "id": 3,
+      "email": "bobsmith@example.com",
+      "subject": "Vacation Request",
+      "message": "Requesting vacation time from June 1-15. Thank you.",
+      "isSeen": true
+    },
+    {
+      "id": 4,
+      "email": "sarahjones@example.com",
+      "subject": "Sales Meeting",
+      "message": "Reminder: sales meeting at 2pm today in boardroom.",
+      "isSeen": true
+    },
+    {
+      "id": 5,
+      "email": "mikebrown@example.com",
+      "subject": "Team Building Activity",
+      "message": "Join us for team building activity on Friday at 3pm.",
+      "isSeen": true
+    },
+    {
+      "id": 6,
+      "email": "lindawilliams@example.com",
+      "subject": "Expense Report",
+      "message": "Submitting expense report for May. Please let me know.",
+      "isSeen": true
+    },
+    {
+      "id": 7,
+      "email": "jasonlee@example.com",
+      "subject": "New Employee Onboarding",
+      "message": "Welcome our new employee! Onboarding schedule attached.",
+      "isSeen": true
+    },
+    {
+      "id": 8,
+      "email": "katiebaker@example.com",
+      "subject": "Client Meeting",
+      "message": "Reminder: client meeting at 11am tomorrow in conference room.",
+      "isSeen": true
+    },
+    {
+      "id": 9,
+      "email": "samuelgarcia@example.com",
+      "subject": "Team Lunch",
+      "message": "Join us for team lunch on Thursday at 12pm.",
+      "isSeen": true
+    },
+    {
+      "id": 10,
+      "email": "susanmiller@example.com",
+      "subject": "Request for Information",
+      "message": "Requesting information on project status. Please let me know.",
+      "isSeen": true
+    }
+]  
