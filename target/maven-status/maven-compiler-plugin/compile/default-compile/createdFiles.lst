@@ -1,0 +1,6 @@
+com\rikin\allstateemail\repository\EmailRepository.class
+com\rikin\allstateemail\AllStateEmailApplication.class
+com\rikin\allstateemail\service\EmailServiceImplementation.class
+com\rikin\allstateemail\service\EmailService.class
+com\rikin\allstateemail\model\Email.class
+com\rikin\allstateemail\Controller\EmailController.class
