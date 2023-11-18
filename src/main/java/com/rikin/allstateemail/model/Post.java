@@ -9,16 +9,16 @@ import javax.persistence.Id;
 
 @Entity
 @AllArgsConstructor
-public class Email {
+public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String email;
+    private String post;
     private String subject;
     private String message;
     private Boolean isSeen=false;
 
-    public Email(){
+    public Post(){
     }
 
     public int getId() {
@@ -29,12 +29,12 @@ public class Email {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPost() {
+        return post;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPost(String post) {
+        this.post = post;
     }
 
     public String getSubject() {

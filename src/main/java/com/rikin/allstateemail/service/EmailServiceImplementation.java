@@ -1,6 +1,6 @@
 package com.rikin.allstateemail.service;
 
-import com.rikin.allstateemail.model.Email;
+import com.rikin.allstateemail.model.Post;
 import com.rikin.allstateemail.repository.EmailRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +16,8 @@ public class EmailServiceImplementation implements EmailService {
     private EmailRepository emailRepository;
 
     @Override
-    public List<Email> getAllEmails() {
-        List<Email> emailsList;
+    public List<Post> getAllEmails() {
+        List<Post> emailsList;
         emailsList = emailRepository.findAllByOrderByIdDesc();
         return emailsList;
     }
@@ -25,21 +25,21 @@ public class EmailServiceImplementation implements EmailService {
     @Override
     public String deleteEmail(int id){
         emailRepository.deleteById(id);
-        return "Email deleted" + id;
+        return "Post deleted" + id;
     }
 
     @Override
-    public Email updateEmailIsRead(Email email) {
-        Email existingEmail = emailRepository.findById(email.getId()).orElse(null);
-        existingEmail.setEmail(email.getEmail());
-        existingEmail.setSubject(email.getSubject());
-        existingEmail.setMessage(email.getMessage());
-        existingEmail.setSeen(true);
-        return emailRepository.save(existingEmail);
+    public Post updateEmailIsRead(Post post) {
+        Post existingPost = emailRepository.findById(post.getId()).orElse(null);
+        existingPost.setPost(post.getPost());
+        existingPost.setSubject(post.getSubject());
+        existingPost.setMessage(post.getMessage());
+        existingPost.setSeen(true);
+        return emailRepository.save(existingPost);
     }
 
     @Override
-    public Email addEmail(Email email){
-        return emailRepository.save(email);
+    public Post addEmail(Post post){
+        return emailRepository.save(post);
     }
 }

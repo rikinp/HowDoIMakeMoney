@@ -6,7 +6,7 @@
 //import java.util.Arrays;
 //import java.util.List;
 //
-//import com.rikin.allstateemail.model.Email;
+//import com.rikin.allstateemail.model.Post;
 //import com.rikin.allstateemail.repository.EmailRepository;
 //import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
@@ -20,7 +20,7 @@
 //
 //
 //import com.rikin.allstateemail.Controller.EmailController;
-//import com.rikin.allstateemail.model.Email;
+//import com.rikin.allstateemail.model.Post;
 //import com.rikin.allstateemail.service.EmailService;
 //import org.junit.jupiter.api.extension.ExtendWith;
 //import org.springframework.security.test.context.support.WithMockUser;
@@ -48,12 +48,12 @@
 //    @MockBean
 //    private EmailService emailService;
 //
-//    public List<Email> testList = new ArrayList<Email>();
+//    public List<Post> testList = new ArrayList<Post>();
 //
-//    Email mockemail = new Email(70, "test@gmail.com", "test", "test email message", false);
-//    Email mockemail2 = new Email(71, "test2@gmail.com", "test 2", "test email message 2", false);
+//    Post mockemail = new Post(70, "test@gmail.com", "test", "test email message", false);
+//    Post mockemail2 = new Post(71, "test2@gmail.com", "test 2", "test email message 2", false);
 //
-//    testList<Email>.add(mockemail);
+//    testList<Post>.add(mockemail);
 //
 //
 //
@@ -63,7 +63,7 @@
 //    public void retrieveDetailsForemail() throws Exception {
 //
 //        Mockito.when(emailService.getAllEmails()).thenReturn(
-//                (List<Email>) mockemail
+//                (List<Post>) mockemail
 //        );
 //
 //        RequestBuilder requestBuilder = MockMvcRequestBuilders.get(

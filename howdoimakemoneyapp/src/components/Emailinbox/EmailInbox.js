@@ -133,7 +133,7 @@ export default function PermanentDrawerLeft({ emailData, deleteEmail, toggleSeen
         </List>
         <Divider />
         <List>
-          {["All mail"].map((text, index) => (
+          {["All Posts"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>

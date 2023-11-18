@@ -1,12 +1,12 @@
 package com.rikin.allstateemail.service;
 
-import com.rikin.allstateemail.model.Email;
+import com.rikin.allstateemail.model.Post;
 
 import java.util.List;
 
 public interface EmailService {
-    public List<Email> getAllEmails();
+    public List<Post> getAllEmails();
     public String deleteEmail(int id);
-    public Email updateEmailIsRead(Email email);
-    public Email addEmail(Email email);
+    public Post updateEmailIsRead(Post post);
+    public Post addEmail(Post post);
 }
