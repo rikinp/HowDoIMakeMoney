@@ -43,6 +43,7 @@ function App() {
     getData();
     // setEmailData(jsonData);
   }, []);
+  const [bool, handleBool] = useState(true);
 
   return (
     <div className="App">
@@ -51,6 +52,15 @@ function App() {
         deleteEmail={deleteEmail}
         toggleSeen={toggleSeen}
       />
+      {bool && (
+        <iframe
+          allow="microphone;"
+          width="650"
+          height="430"
+          src="https://console.dialogflow.com/api-client/demo/embedded/45803b78-932d-404b-8efa-5e13689225fe">
+        </iframe>
+      // onClick={() => console.log("Toggle bool")}
+    )}
     </div>
   );
 }

@@ -2,23 +2,21 @@ package com.rikin.allstateemail.model;
 
 import lombok.AllArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "Posts")
 @AllArgsConstructor
-public class Post {
+public class Email {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String post;
+    private String email;
     private String subject;
     private String message;
     private Boolean isSeen=false;
 
-    public Post(){
+    public Email(){
     }
 
     public int getId() {
@@ -29,12 +27,12 @@ public class Post {
         this.id = id;
     }
 
-    public String getPost() {
-        return post;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPost(String post) {
-        this.post = post;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSubject() {

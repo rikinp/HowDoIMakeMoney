@@ -12,7 +12,7 @@ function Email({ selectedEmail }) {
           <div className="mail-body">
             <div className="mail-bodyHeader">
               <div className="mail-subject">
-                <h2>From: {selectedEmail.email}</h2>
+                <h2>Title: {selectedEmail.email}</h2>
               </div>
               <Divider />
               <div className="mail-subject">

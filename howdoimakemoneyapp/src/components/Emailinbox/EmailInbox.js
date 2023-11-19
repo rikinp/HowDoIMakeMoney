@@ -76,7 +76,7 @@ export default function PermanentDrawerLeft({ emailData, deleteEmail, toggleSeen
             <div className="searchInputs">
               <input
                 type="search"
-                placeholder="From: Search here..."
+                placeholder="Tags: Search here..."
                 onChange={handleChange}
               />
               <div className="searchIcon">
@@ -106,28 +106,28 @@ export default function PermanentDrawerLeft({ emailData, deleteEmail, toggleSeen
                   <ListItemText
                     primary={
                       <React.Fragment>
-                        {" From: "}
+                        {" Tags: "}
                         {email.email}
                       </React.Fragment>
                     }
-                    secondary={
-                      <React.Fragment>
-                        <Typography
-                          sx={{ display: "inline" }}
-                          component="span"
-                          variant="body2"
-                          color="text.primary"
-                        >
-                          {email.message}
-                        </Typography>
-                      </React.Fragment>
-                    }
+                    // secondary={
+                    //   <React.Fragment>
+                    //     <Typography
+                    //       sx={{ display: "inline" }}
+                    //       component="span"
+                    //       variant="body2"
+                    //       color="text.primary"
+                    //     >
+                    //       {email.message}
+                    //     </Typography>
+                    //   </React.Fragment>
+                    // }
                   />
                 </div>
               </ListItemButton>
-              <IconButton aria-label="delete" onClick={() => deleteEmail(email)} data-testid={`delete-button-${email.id}`}>
+              {/* <IconButton aria-label="delete" onClick={() => deleteEmail(email)} data-testid={`delete-button-${email.id}`}>
                 <DeleteIcon />
-              </IconButton>
+              </IconButton> */}
             </ListItem>
           ))}
         </List>

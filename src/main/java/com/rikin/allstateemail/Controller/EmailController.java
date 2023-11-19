@@ -1,6 +1,6 @@
 package com.rikin.allstateemail.Controller;
 
-import com.rikin.allstateemail.model.Post;
+import com.rikin.allstateemail.model.Email;
 import com.rikin.allstateemail.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ public class EmailController {
     private EmailService emailService;
 
     @GetMapping("/getAll")
-    public List<Post> getAllEmails() {
+    public List<Email> getAllEmails() {
         return emailService.getAllEmails();
     }
 
@@ -26,13 +26,13 @@ public class EmailController {
     }
 
     @PutMapping("/update")
-    public Post updateEmailIsRead(@RequestBody Post post){
-        return emailService.updateEmailIsRead(post);
+    public Email updateEmailIsRead(@RequestBody Email email){
+        return emailService.updateEmailIsRead(email);
     }
 
     @PostMapping("/add")
-    public Post addEmail(@RequestBody Post post){
-        return emailService.addEmail(post);
+    public Email addEmail(@RequestBody Email email){
+        return emailService.addEmail(email);
     }
 
 }

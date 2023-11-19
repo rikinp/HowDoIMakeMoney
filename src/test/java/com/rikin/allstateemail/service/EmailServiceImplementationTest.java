@@ -1,6 +1,6 @@
 package com.rikin.allstateemail.service;
 
-import com.rikin.allstateemail.model.Post;
+import com.rikin.allstateemail.model.Email;
 import com.rikin.allstateemail.repository.EmailRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-class PostServiceImplementationTest {
+class EmailServiceImplementationTest {
 
     @Mock
     private EmailRepository emailRepository;
@@ -35,23 +35,23 @@ class PostServiceImplementationTest {
     @Test
     void saveOrder() {
         //given
-        Post post = new Post(
+        Email email = new Email(
                 2,
                 "sender@gmail.com",
-                "Test post",
-                "This is test post",
+                "Test email",
+                "This is test email",
                 false
         );
 
         //when
-        underTest.addEmail(post);
+        underTest.addEmail(email);
 
         //then
-        ArgumentCaptor<Post> ordersArgumentCaptor =
-                ArgumentCaptor.forClass(Post.class);
+        ArgumentCaptor<Email> ordersArgumentCaptor =
+                ArgumentCaptor.forClass(Email.class);
         verify(emailRepository).save(ordersArgumentCaptor.capture());
-        Post capturedOrder = ordersArgumentCaptor.getValue();
-        assertThat(capturedOrder).isEqualTo(post);
+        Email capturedOrder = ordersArgumentCaptor.getValue();
+        assertThat(capturedOrder).isEqualTo(email);
 
     }
 
